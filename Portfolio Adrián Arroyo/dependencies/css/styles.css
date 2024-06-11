@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #1a868a;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #698ba1;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+  --transition2: 0.15s;
+  --lightmode-font-color:#000000;
+  --darkmode-font-color:#ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* -- BARRA DE NAVEGACION  -- */
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  padding: 1.5rem 3.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-bar {
+  background-color: whitesmoke;
+  color: var(--lightmode-font-color);
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .navigation-bar {
+  background-color: #1d1d1d;;
+  color: #ffffff;
+}
+
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.dark-mode nav a:hover {
+  color: #2cdae0;
+  border-bottom: 2px solid #2cdae0;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+#modoBoton {
+  background-image: url("../icons/BotonModoClaro.png");
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 1.5rem;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  transition: var(--transition2);
+  cursor: pointer;
+  
+}
+
+/*#modoBoton:hover {
+  cursor: pointer;
+  background-image: url("../icons/BotonModoOscuro.png");
+}*/
+
+.dark-mode #modoBoton {
+  background-image: url("../icons/BotonModoOscuro.png");
+}
+
+/*.dark-mode #modoBoton:hover {
+  cursor: pointer;
+  background-image:  url("../icons/BotonModoClaro.png");
+}*/
+
+#modoBoton.active {
+  background-image: url("../icons/BotonModoClaro.png");
+}
+
+.dark-mode #modoBoton.active {
+  background-image: url("../icons/BotonModoOscuro.png");
+}
+/* -- ACERCA DE -- */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.hero img {
+  padding-top: 1rem;
+  height: 37.5rem;
+  width: 37.5rem;
+  filter:grayscale();
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  filter: none;
+  transform: scale(1.02);
+}
+
+.bio {
+  width: 25rem;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.bio-card {
+  background-color: #fff;
+  width: 25rem;
+  height: auto;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  transition: transform 0.5s ease;
+}
+
+.bio-card:hover {
+  transform: scale(1.02);
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .bio-card {
+  background-color: #03409634;
+  ;
+  color: #ffffff;
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+/* -- MAS ACERCA DE -- */
+
+.more-about {
+  padding: 1rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .more-about {
+  background-color: #1d1d1d;;
+  color: #ffffff;
+}
+
+/* -- HABILIDADES Y CONOCIMIENTOS -- */
+
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+.icon-card {
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.icon-card:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .icon-card {
+  background-color: #00265a34;;
+  color: #ffffff;
+}
+
+/* -- PROYECTOS -- */
+
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+
+/* Estilos para el modo oscuro */
+.dark-mode .projects {
+  background-color: #1d1d1d;;
+  color: #ffffff;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+
+.project-container:hover {
+  transform: scale(1.05);
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode .project-card {
+  background-color: #1a1a1a;;;
+  color: #ffffff;
+}
+
+/* -- FORMULARIO DE CONTACTO -- */
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  transition: transform 0.5s ease-in;
+}
+
+.contact-form-container:hover{
+  transform: scale(1.02);
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+  font-family: var(--font-family);
+}
+
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.dark-mode .contact-form-container .input-field {
+  background-color: rgb(12, 19, 27)
+}
+
+.input-field{
+  text-indent: 1rem;
+}
+
+.input-field::placeholder {
+    color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  color:white;
+  font-family: var(--font-family);
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+/* -- REDES SOCIALES -- */
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+  filter: drop-shadow(0px 0px 3px #8b8eaf);
+}
+
+.socicon:hover{
+  transform: scale(1.12);
+}
+
+/* -- FOOTER --*/
+
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+
+
+/* Estilos para el modo oscuro */
+.dark-mode .footer-class{
+  background-color: #1d1d1d;;
+  color: #ffffff;
+}
+
+/* -- BOTON VOLVER ARRIBA -- */
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* -- RESPONSIVE DESIGN -- */
+
+@media screen and (max-width: 720px) { /* Para pantallas de menos de 720px de ancho */
+  
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+        height: 37.5rem;
+        width: 30rem;
+    }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+
+  .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+  .contact-form-container {
+    max-width: 23.75rem;
+  }
+}
+
+@media screen and (max-width: 420px) { /* Para pantallas de menos de 720px de ancho */
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+} 

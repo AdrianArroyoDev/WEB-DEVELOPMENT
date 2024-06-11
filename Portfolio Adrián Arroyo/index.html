@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="dependencies/css/styles.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="dependencies/icons/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="dependencies/icons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="dependencies/css/animatedStyles.css"
+    />
+    <title>Adrián Arroyo | Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+
+    <nav class="navigation-bar">
+      <h1>ADRIÁN ARROYO</h1>
+      <ul class="navigation">
+        <li><a href="#AcercaDe" class="nav-link">Acerca De</a></li>
+        <li><a href="#Habilidades&Conocimientos" class="nav-link">Habilidades y Conocimientos</a></li>
+        <li><a href="#Proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#Contacto" class="nav-link">Contacto</a></li>
+        <li><button onclick="toggleDarkMode()" class="light-mode" id="modoBoton" type="button"></button></li>
+      </ul>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="AcercaDe">
+      <img
+        src="dependencies/images/FotoPerfil.png"
+        alt="adrian.arroyo"
+        loading="lazy"
+        class="hero-img"
+      />
+      <div class="bio animate__animated animate__shakeX">
+        <div class="bio-card ">
+          <h2 class="bio-title" id="#AcercaDe">Un poco sobre mi</h2>
+          <p class="bio-text">
+            Me llamo Adrián y aporto mi mejor versión como desarrollador de Altitude,
+            trabajando además en la solución de incidencias y creación de reportes.
+            Me caracterizo por tener un hambre constante de adquirir nuevos conocimientos
+            y aptitudes.
+          </p>
+          <p class="bio-text">
+            Empecé mi carrera laboral en 2019 como dependiente de una tienda de deportes,
+            donde pude desarrollar mis dotes sociales mientras me formaba, pasándome
+            al poco tiempo al sector de la informática y las telecomunicaciones donde
+            actualmente trabajo.
+          </p>
+          <p class="bio-text">
+            ¿En mis ratos libres? Me gusta practicar y ver todo tipo de deportes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- More About Section -->
+
+    <section class="more-about">
+      <h2>Sobre Desarrollo Web</h2>
+      <p>
+        En cuanto a mi camino en el desarrollo web, se podría decir que soy completamente autodidacta. No obstante, de manera
+        complementaria, estoy cursando el Ciclo Superior de Desarrollo de Aplicaciones Web (DAW) en su modalidad online.
+      </p>
+      <p>
+        Mis lenguajes preferidos son HTML, JavaScript y CSS, con los cuales disfruto creando interfaces web intuitivas y
+        dinámicas. Además, he trabajado con sistemas de gestión de contenidos (CMS) como WordPress y Jimdo, lo que me ha
+        permitido desarrollar y gestionar sitios web de manera eficiente y efectiva.
+      </p>
+      <p>
+        En mi tiempo libre, me gusta explorar frameworks modernos como React y Node.js, y mantenerme actualizado con las últimas
+        tendencias en desarrollo web. Estoy comprometido con la mejora continua y la excelencia en todo lo que hago, y estoy
+        siempre abierto a nuevos desafíos que me permitan crecer profesional y personalmente.
+      </p>
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills" id="skills">
+      <h2 class="skill-header" id="Habilidades&Conocimientos">Mis Habilidades Principales</h2>
+
+      <div class="skills-wrapper">
+        <div class="first-set animate__animated animate__pulse">
+          <img
+            src="dependencies/icons/icons8-html-5.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="dependencies/icons/icons8-css3.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="dependencies/icons/icons8-javascript.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+
+        <div class="second-set animate__animated animate__pulse">
+          <img
+            src="dependencies/icons/icons8-bootstrap.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="dependencies/icons/icons8-react-native.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="dependencies/icons/icons8-git.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+      </div>
+    </section>
+    
+    <!-- Projects section -->
+
+    <section class="projects" id="Proyectos">
+      <h2 class="projects-title">Algunos de mis Proyectos Recientes</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="dependencies/images/expenseTracker.png"
+            alt="expense-tracker"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Expense Tracker</h3>
+          <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="dependencies/images/netflixClone.png"
+            alt="netflic-clone"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Netflix Clone</h3>
+          <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="dependencies/images/greenyEarth.png"
+            alt="greeny-earth"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Greeny Earth</h3>
+          <p class="project-details">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+
+    <section class="contact" id="Contacto">
+      <h2>Ponte en contacto conmigo</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xyylngw" method="POST">
+            <div class="form-control">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="  Introduce tu Nombre"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="  Introduce tu Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Escribe tu Mensaje"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="ENVIAR"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+
+    <div class="socials">
+      <a href="#" target="_blank">
+        <img
+          src="dependencies/icons/icons8-X.png"
+          alt="Twitter"
+          loading="lazy"
+          class="socicon"
+        />
+      </a>
+      <a href="#" target="_blank">
+        <img
+          src="dependencies/icons/icons8-instagram.png"
+          alt="Instagram"
+          loading="lazy"
+          class="socicon"
+        />
+      </a>
+      <a href="https://es.linkedin.com/in/adri%C3%A1n-arroyo-cabrero-3a4357181?trk=people-guest_people_search-card" target="_blank">
+        <img
+          src="dependencies/icons/icons8 - Linkedin.png"
+          alt="Linkedin"
+          loading="lazy"
+          class="socicon"
+        />
+      </a>
+      <a href="https://github.com/AdrianArroyoDev/WEB-DEVELOPMENT" target="_blank">
+        <img src="dependencies/icons/icons8-github.png" alt="Github" class="socicon"/>
+      </a>
+    </div>
+
+    <!-- Scroll to Top Button -->
+
+    <div class="scroll-up" id="scroll-up">
+      <img
+        src="dependencies/icons/icons8-upward-arrow.png"
+        class="socicon up-arrow"
+        alt="scroll-up"
+      />
+    </div>
+
+    <!-- Footer section -->
+
+    <footer class="footer-class">
+      <p class="copy">&copy; Copyright 2024</p>
+      <p class="copy">
+        <a href="https://es.linkedin.com/in/adri%C3%A1n-arroyo-cabrero-3a4357181?trk=people-guest_people_search-card" target="_blank"
+          >🟐 Adrián Arroyo 🟐</a
+        >
+      </p>
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="dependencies/js/app.js" defer></script>
+  </body>
+</html>
